@@ -1,5 +1,7 @@
-<%= form_for :article, url: articles_path do |f| %>
-
+<h1>Editing article</h1>
+ 
+<%= form_for :article, url: article_path(@article), method: :patch do |f| %>
+ 
   <% if @article.errors.any? %>
     <div id="error_explanation">
       <h2>
@@ -13,7 +15,7 @@
       </ul>
     </div>
   <% end %>
-  
+ 
   <p>
     <%= f.label :title %><br>
     <%= f.text_field :title %>
@@ -27,6 +29,7 @@
   <p>
     <%= f.submit %>
   </p>
+ 
 <% end %>
-
+ 
 <%= link_to 'Back', articles_path %>
