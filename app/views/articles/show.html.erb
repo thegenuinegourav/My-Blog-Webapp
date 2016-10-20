@@ -1,12 +1,4 @@
-<p>
-  <strong>Title:</strong>
-  <%= @article.title %>
-</p>
- 
-<p>
-  <strong>Text:</strong>
-  <%= @article.text %>
-</p>
-
-<%= link_to 'Edit', edit_article_path(@article) %>
-<%= link_to 'Back', articles_path %>
+<h1><%= @article.title %></h1>
+<h3><%= @article.text %></h3>
+<%= link_to "Back", articles_path %>
+<%= link_to "Edit", edit_article_path(@article) %>
